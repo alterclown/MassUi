@@ -1,0 +1,15 @@
+export interface MainCertificate {
+    MainCertificateId: number,
+    RegNumber: number,
+    Name: string,
+    FathersName: string,
+    Session: string,
+    Program: string,
+    CGPA: string,
+    Address: string,
+    Mobile: string,
+    Email: string,
+    ApplyDate: string,
+    TranIt: string,
+    Status: string,
+}

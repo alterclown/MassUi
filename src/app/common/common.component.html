@@ -1,0 +1,32 @@
+<mat-toolbar class="navbar" width="105%">
+    <div class="logout">
+        <span>
+            <mat-icon (click)="logOut()"> account_circle</mat-icon>
+        </span>
+        <span>
+            {{title}}
+        </span>
+    </div>
+</mat-toolbar>
+  <br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="text-align: center;">Mass Data Limited</h3>
+                </div>
+                <div class="card-body">
+                    <section>
+                        <div class="example-button-row">
+                          <a mat-raised-button routerLink="student">Student</a>
+                          <a mat-raised-button routerLink="temporary-certificate">Temporary</a>
+                          <a mat-raised-button routerLink="main-certificate">Main</a>
+                        </div>
+                      </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

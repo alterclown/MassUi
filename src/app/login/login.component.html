@@ -1,0 +1,39 @@
+<div class="sidenav">
+   <div class="login-main-text">
+      <h2>Mass Data Limited<br></h2>
+      <p>Login or register from here to access.</p>
+   </div>
+</div>
+<div class="main">
+   <div class="col-md-6 col-sm-12">
+      <div class="login-form">
+         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+               <label>User Name</label>
+               <input type="text" class="form-control" placeholder="User Name" formControlName="Email">
+               <span class="text-danger" [ngClass]="{ 'is-invalid': submitted && loginForm.controls.Email.errors }">
+                  User Name is required
+               </span>
+            </div>
+            <div class="form-group">
+               <label>Password</label>
+               <input type="password" class="form-control" placeholder="Password" formControlName="Password">
+               <span class="text-danger" [ngClass]="{ 'is-invalid': submitted && loginForm.controls.Password.errors }">
+                  Password is required
+               </span>
+            </div>
+            <div class="form-group">
+               <label>Confirm Password</label>
+               <input type="password" class="form-control" placeholder="Confirm Password" formControlName="ConfirmPassword">
+               <span class="text-danger"
+                  [ngClass]="{ 'is-invalid': submitted && loginForm.controls.ConfirmPassword.errors }">
+                  Confirm Password is required
+               </span>
+            </div>
+            <button type="submit" class="btn btn-secondary">Login</button>
+            <button type="submit" class="btn btn-secondary" routerLink="/register">Register</button>
+         </form>
+      </div>
+   </div>
+</div>
+<router-outlet></router-outlet>

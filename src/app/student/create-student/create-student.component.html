@@ -1,0 +1,68 @@
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Create Student</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="Name">
+                            <span class="text-danger" *ngIf="(studentFormControl.Name.touched || submitted) && studentFormControl.Name.errors?.required">
+                                Email is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" formControlName="Email">
+                            <span class="text-danger" *ngIf="(studentFormControl.Email.touched || submitted) && studentFormControl.Email.errors?.required">
+                                Email is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Reg Number</label>
+                            <input type="text" class="form-control" formControlName="RegNumber">
+                            <span class="text-danger" *ngIf="(studentFormControl.RegNumber.touched || submitted) && studentFormControl.RegNumber.errors?.required">
+                                Reg Number is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" formControlName="Phone" >
+                            <span class="text-danger" *ngIf="(studentFormControl.Phone.touched || submitted) && studentFormControl.Phone.errors?.required">
+                                Phone is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>CreatedDate</label>
+                            <input type="date" class="form-control" formControlName="CreatedDate">
+                            <span class="text-danger" *ngIf="(studentFormControl.CreatedDate.touched || submitted) && studentFormControl.CreatedDate.errors?.required">
+                                Created Date is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" formControlName="Password">
+                            <span class="text-danger" *ngIf="(studentFormControl.Password.touched || submitted) && studentFormControl.Password.errors?.required">
+                                Password is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" class="form-control" formControlName="ConfirmPassword">
+                            <span class="text-danger" *ngIf="(studentFormControl.ConfirmPassword.touched || submitted) && studentFormControl.ConfirmPassword.errors?.required">
+                                Confirm Password is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

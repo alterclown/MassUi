@@ -1,0 +1,23 @@
+<mat-toolbar class="navbar" width="105%">
+    <div class="logout">
+        <span>
+            <span>
+                <mat-icon (click)="logOut()"> account_circle</mat-icon>
+            </span>
+            <mat-icon routerLink="/common"> keyboard_backspace</mat-icon>
+        </span>
+    </div>
+</mat-toolbar>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h3 style="text-align: center;">Main Certificate List</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-main-certificate-list></app-main-certificate-list>
+<router-outlet ></router-outlet>
